@@ -1,56 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body align="center">
-    <h1>calculator</h1>
-
-    <div>
-      <input type="number" id="x" min="0" />
-    </div>
-    <br />
-    <div>
-      <input type="number" id="y" min="0" />
-    </div>
-    <br />
-    <div>
-      <input type="text" id="f" placeholder="+,-,*,/" />
-    </div>
-    <br />
-    <div>
-      <button id="gt" onclick="v()">equel</button>
-    </div>
-    <br />
-    <div>
-      <button>
-        <p id="out"></p>
-      </button>
-    </div>
-    <br />
-    <img src="Chinatsu kano.jpg" height="400" width="400" />
-
-    <script>
-      function v() {
-        let a = Number(document.getElementById("x").value);
-        let b = Number(document.getElementById("y").value);
-        let q = document.getElementById("f").value;
-        let p;
-
-        if (q == "+") {
-          p = a + b;
-        } else if (q == "-") {
-          p = a - b;
-        } else if (q == "*") {
-          p = a * b;
-        } else if (q == "/") {
-          p = a / b;
-        } else {
-          p = false;
+    <style>
+        .conta{
+            border: 5px solid black;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
-        document.getElementById("out").innerHTML = p;
-      }
-    </script>
-  </body>
+
+        img{
+            border: 8px none black;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+     <h1 align="center">MY PORTOFOLIO</h1>
+    <div class="conta">
+        <img src="on.png">
+    </div>
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam molestiae voluptatum minima quaerat nulla corporis, hic dicta saepe pariatur repudiandae facilis ad quasi quod ea doloribus eveniet iure consequatur.loremLorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem ut tempore maxime expedita quam odio quae esse aspernatur ullam quisquam libero voluptatibus consectetur, culpa autem nemo ducimus exercitationem eum.</p>
+    </div>
+</body>
 </html>

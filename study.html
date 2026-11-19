@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        font-family: sans-serif;
+        font-size: smaller;
+      }
+
+      .login {
+        border: 5px solid black;
+        border-radius: 10px;
+        height: 400px;
+        width: 300px;
+        box-shadow: 5px 5px 2px black;
+
+        animation: anm;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-play-state: running;
+
+        justify-content: center;
+      }
+
+      body {
+        border: 5px solid black;
+        height: 500px;
+        width: 500px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: anm;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-play-state: paused;
+      }
+
+      @keyframes anm{
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body align="center">
+    <div class="login">
+      <h1>----messeage----</h1>
+      <br>
+      <div>
+        <label>name</label>
+      </div>
+      <div>
+        <input type="text" placeholder="example:afriza" id="nama" />
+      </div>
+      <br />
+      <div>
+        <label>age</label>
+      </div>
+      <div>
+        <input
+          type="number"
+          placeholder="please enter your age"
+          id="age"
+          min="0"
+        />
+      </div>
+      <br />
+      <div>
+        <button onclick="f()">Enter</button>
+      </div>
+      <div>
+        <p id="outnama"></p>
+        </div>
+        <div>
+        <p id="outumu"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function f() {
+        let x = document.getElementById("nama").value;
+        let y = document.getElementById("age").value;
+        if (x !== "") {
+          document.getElementById("outnama").innerHTML = "Hello " + x;
+        } else {
+          document.getElementById("outnama").innerHTML =
+            "You didn't put your name yet";
+        }
+
+        if (y <= 15) {
+          document.getElementById("outumu").innerHTML =
+            "You're " + y + " its mean you're a teenager";
+        } else if (y <= 50) {
+          document.getElementById("outumu").innerHTML =
+            "You're " + y + " its mean you're old man";
+        } else if (y <= 90) {
+          document.getElementById("outumu").innerHTML =
+            "You're " + y + " its mean you must enjoy your life";
+        } else if (y === null) {
+           document.getElementById("outumu").innerHTML =
+            "invalid"; 
+        }
+      }
+    </script>
+  </body>
+</html>
